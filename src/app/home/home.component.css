@@ -1,0 +1,13 @@
+#middle-movies {
+  background-color: #d8d8d8;
+}
+
+.top-poster {
+  display: block;
+}
+
+.top-image {
+  width: 100%;
+  object-fit: contain;
+  opacity: 1;
+}

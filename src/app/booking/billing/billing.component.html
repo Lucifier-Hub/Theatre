@@ -1,0 +1,76 @@
+<div class="container-fluid bg-light mb-5 py-5" style="height: 500px;">
+  <h2 class="text-center">Payment</h2>
+  <hr />
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      (click)="setShowCard()"
+      type="radio"
+      name="paymentRadios"
+      id="paymentRadios1"
+      value="option1"
+    />
+    <label class="form-check-label" for="paymentRadios1">
+      Credit card
+    </label>
+  </div>
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      (click)="setShowCard()"
+      type="radio"
+      name="paymentRadios"
+      id="paymentRadios2"
+      value="option2"
+    />
+    <label class="form-check-label" for="paymentRadios2">
+      Debit card
+    </label>
+  </div>
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      (click)="setDisableCard()"
+      type="radio"
+      name="paymentRadios"
+      id="paymentRadios3"
+      value="option3"
+    />
+    <label class="form-check-label" for="paymentRadios3">
+      Cash
+    </label>
+  </div>
+  <div *ngIf="showCard">
+    <div class="row my-3">
+      <div class="col-6">
+        <div class="form-group w-75">
+          <label for="cardName">Name on card</label>
+          <input type="text" class="form-control" />
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="form-group w-75">
+          <label for="cardNumber">Card Number</label>
+          <input type="text" class="form-control" />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <div class="form-group w-75">
+          <label for="cardExpiry">Expiration</label>
+          <input type="text" class="form-control" />
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="form-group w-75">
+          <label for="cardCvv">CVV</label>
+          <input type="password" class="form-control" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="showButton" class="my-3">
+    <button class="btn btn-primary" routerLink="/success">Proceed</button>
+  </div>
+</div>
